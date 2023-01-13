@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_gafas',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'proy_final_coderH.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/josef/OneDrive/Documents/Visual Studio Code pruebas/proyectos_django/proy_final_coderH/app_gafas/templates/app_gafas'],
+        'DIRS': ['C:/Users/josef/OneDrive/Documents/Visual Studio Code pruebas/proyectos_django/proy_final_coderH/blog/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

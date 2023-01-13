@@ -1,0 +1,130 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block title %} El farmacéutico {% endblock title %} 
+
+
+{% block content %}
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">El Farmacéutico: un documental que va más allá de la muerte de un hijo</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Martín Quevedo, finde.latercera.com, 05 feb 2022</div>
+                            <!-- Post categories-->
+
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{% static 'assets/images/docu3.jpg' %}" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">El Farmacéutico se inicia en 1999, con Dan Schneider estremecido por la muerte de su hijo en un barrio de Nueva Orleans, conocido por ser la cuna de las drogas de su pueblo.
+
+                                En un lugar donde la mayoría de los asesinatos no tiene respuestas, Schneider, el farmaceútico que da nombre a esta miniserie documental de Netflix, inicia una investigación para resolver la muerte de su hijo, debido a la inoperancia policial.
+                                
+                                Pero esa búsqueda lo lleva a conocer un drama: la alarmante cantidad de jóvenes que consume un fuerte opioide, llamado OxyContin.</p>
+                            <p class="fs-5 mb-4">El mismo al que son adictos miles de adolescentes y que, en el peor de los casos, los lleva a morir de sobredosis.
+
+                                Frente a eso, el farmaceútico se impone una nueva misión: salvar a la mayor cantidad de adolescentes de esta droga, determinación que incluye una investigación en contra de la industria farmacéutica.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">Más allá de una muerte</h2>
+                            <p class="fs-5 mb-4">En cuatro capítulos, El Farmacéutico nos muestra una investigación que va más allá de un caso puntual.
+
+                                Son distintos aspectos los que va tocando esta miniserie. Uno de los primeros es la injusticia que deben vivir los afrodescendientes en uno de los barrios más marginales de Nueva Orleans.
+                                
+                                Si bien no profundiza tanto en esta realidad, vuelve interesante la historia al mostrar que no se trata solo de un problema de los blancos.
+                                
+                                Pero los dardos más duros de esta producción apuntan a la industria farmacéutica, que distribuye con facilidad y casi sin restricciones una droga tan adictiva.
+                                
+                                De hecho, en Estados Unidos se puede comprar solo con receta y, para los adolescentes, conseguirla es pan comido.
+                                
+                                Eso está provocando un problema de salud nacional, con cientos de jóvenes muertos a causa de los opioides.
+                                
+                                ¿Cuántas otra drogas peligrosas son las que se distribuyen con tanta facilidad? Esa es una de las interrogantes que plantea la miniserie.
+                                
+                                Una investigación que parte de la pena de un padre y que revela el drama de toda una ciudad.</p>
+                            
+                            
+                        </section>
+                    </article>
+                    <!-- Comments section-->
+                    <section class="mb-5">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <!-- Comment form-->
+                                <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
+                                <!-- Comment with nested comments-->
+                                <div class="d-flex mb-4">
+                                    <!-- Parent comment-->
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div>
+                                        If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
+                                        <!-- Child comment 1-->
+                                        <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
+                                            </div>
+                                        </div>
+                                        <!-- Child comment 2-->
+                                        <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                When you put money directly to a problem, it makes a good headline.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single comment-->
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div>
+                                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    
+                    <!-- Categories widget-->
+
+                    <div class="card mb-4">
+                        <div class="card-header">Lista de Artículos</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'docu1' %}">Un documental sobre la epidemia de opioides gana el León de Oro</a></li>
+                                        <br>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'docu2' %}">'El crimen del siglo', el documental de HBO sobre las farmacéuticas que deberías verL</a></li>
+                                        <br>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+{% endblock content %}

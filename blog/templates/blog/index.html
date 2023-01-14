@@ -64,22 +64,22 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="{% url 'docu4' %}"><img class="card-img-top" src="{% static 'assets/images/docu4.jpg' %}" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <div class="small text-muted">Diciembre 29, 2022</div>
+                                    <h2 class="card-title h4">La mejor serie de 2021 es 'Dopesick': capitalismo, opiáceos y la ruina de una generación</h2>
+                                    <p class="card-text">Una producción excepcional de Disney+ con Michael Keaton y Rosario Dawson sobre la epidemia de adicción que amenaza el futuro de EEUU</p>
+                                    <a class="btn btn-primary" href={% url 'docu4' %}>Leer más →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="{% url 'docu5' %}"><img class="card-img-top" src="{% static 'assets/images/docu5.jpg' %}" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <div class="small text-muted">Patrick Radden, Septmiebre 2021</div>
+                                    <h2 class="card-title h4">Libro 'El imperio del dolor'</h2>
+                                    <p class="card-text">Desde 2017, Patrick Radden Keefe ha investigado los secretos de la dinastia Sackler. El resultado es una bomba periodistica que relata el auge y declive de una de las grandes familias norteamericanas y su oscuro emporio</p>
+                                    <a class="btn btn-primary" href="{% url 'docu5' %}">Leer más →</a>
                                 </div>
                             </div>
                         </div>
@@ -98,14 +98,16 @@
                                             <ul class="list-unstyled mb-0">
                                                 <li><a href="{% url 'docu1' %}">Un documental sobre la epidemia de opioides gana el León de Oro</a></li>
                                                 <br>
-                                                <li><a href="#!">Freebies</a></li>
+                                                <li><a href="{% url 'docu4' %}">'Dopesick': capitalismo, opiáceos y la ruina de una generación</a></li>
+                                                <br>
+                                                <li><a href="{% url 'docu5' %}">libro El imperio de dolor</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-6">
                                             <ul class="list-unstyled mb-0">
                                                 <li><a href="{% url 'docu2' %}">'El crimen del siglo', el documental de HBO sobre las farmacéuticas que deberías verL</a></li>
                                                 <br>
-                                                <li><a href="#!">Freebies</a></li>
+                                                <li><a href="{% url 'docu3' %}">El Farmacéutico: un documental que va más allá de la muerte de un hijo</a></li>
                                             </ul>
                                         </div>
                                     </div>

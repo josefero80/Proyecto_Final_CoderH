@@ -1,0 +1,41 @@
+
+{% extends 'blog/base.html' %}
+
+{% block title %} Lista edicion {% endblock title %}
+
+{% block content %}
+
+<table class="table">
+    <tbody>
+      <tr>
+        <th>Titulo</th>
+        <th>Categoria</th>
+        <td>Fecha</td>
+        <td>Ver</td>
+        <td>Editar</td>
+        <td>Eliminar</td>
+      </tr>
+      {% for blog in object_list %}
+      <tr>
+        <td>{{ blog.titulo }}</td>
+        <td>{{ blog.categoria }}</td>
+        <td>{{ blog.fecha_blog }}</td>
+        <td>
+          <a href="{% url 'detalle_post' blog.id %}">Ver más...</a>
+        </td>
+        <td>
+          <a href="{% url 'editar_post' blog.id %}">Editar</a>
+        </td>
+        <td>
+          <a href="{% url 'elimina_post' blog.id %}">Eliminar</a>
+        </td>
+      </tr> 
+      {% endfor %}
+    </tbody>
+  </table>
+<br>
+  <a class="btn btn-primary" href="{% url 'crear_post' %}">Crear Nuevo Post</a>
+<br><br>
+
+{% endblock content %}
+        

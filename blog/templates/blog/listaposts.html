@@ -1,0 +1,32 @@
+
+
+{% extends 'blog/base.html' %}
+
+{% block title %} Blog JoseCoderH {% endblock title %}
+
+{% block content %}
+{% for blog in object_list %}
+<div class="container">
+  <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-6">
+          <!-- Featured blog post-->
+          
+          <div class="card mb-4">
+              <img src="{{ blog.imagen.url }}" width="420" height="300" alt="">
+              <div class="card-body">
+                  <div class="small text-muted">{{blog.fecha_blog}}</div>
+                  <h2 class="card-title">{{blog.titulo}}</h2>
+                  <p class="card-text">{{blog.descripcion_corta}}</p>
+                  <a class="btn btn-primary" href="{% url 'detalle_post' blog.id %}">Leer más →</a>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>   
+{% endfor %} 
+
+
+{% endblock content %}
+        

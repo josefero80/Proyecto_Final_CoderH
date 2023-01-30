@@ -20,14 +20,7 @@ class Migration(migrations.Migration):
                 ('comentario', models.TextField()),
             ],
         ),
-        migrations.CreateModel(
-            name='Galeria',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('id_foto', models.CharField(max_length=50)),
-                ('foto', models.ImageField(upload_to=None)),
-            ],
-        ),
+
         migrations.CreateModel(
             name='Post',
             fields=[

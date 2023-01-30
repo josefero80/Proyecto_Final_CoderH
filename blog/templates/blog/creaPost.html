@@ -1,0 +1,57 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Crea Post {% endblock title %}
+
+{% block content %}
+
+   
+    <div class="card">
+        <div class="card-header">
+            <h2>Crea Nuevo Post</h2>
+        </div>
+    </div>
+    <div class="card-body card-block">
+        <form action="#" method="POST" enctype="multipart/form-data" class="form-horizontal">
+            {% csrf_token %}
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.titulo.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.titulo }}</div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.categoria.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.categoria }}</div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.autor.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.autor }}</div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.fecha_blog.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.fecha_blog }}</div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.campo_blog.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.campo_blog | safe }}</div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.descripcion_corta.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.descripcion_corta }}</div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><strong>{{ form.imagen.label }}:</strong></div>
+                <div class="col-12 col-md-9">{{ form.imagen }}</div>
+            </div>
+            <!--Activa ckeditor-->
+            {{form.media}}
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+        
+
+    </div>
+    
+
+<br><br>
+<a href="{% url 'lista_edicion' %}">Volver lista</a>
+{% endblock content %}
+ 

@@ -1,122 +1,20 @@
 
-
 {% extends 'blog/base.html' %}
-
-{% load static %}
 
 {% block title %} Blog JoseCoderH {% endblock title %}
 
-{% block header %}
+{% block content %}
 
 <!-- Page header with logo and tagline-->
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5">
-            <h1 class="fw-bolder">Crisis de los Opioides</h1>
+            <h1 class="fw-bolder">Bienvenido!!</h1>
 
-            <p class="lead mb-0">Ingresa a tu <a class="lead mb-0" href="#">cuenta</a> para leer los contenidos.</p>
+            <p class="lead mb-0"><a class="lead mb-0" href="{% url 'lista_posts' %}">INGRESA AQUI</a> para leer los contenidos.</p>
         </div>
     </div>
 </header>
-
-{% endblock header %}
-
-{% block content %}
-        <!-- Page content-->
-        <div class="container">
-            <div class="row">
-                <!-- Blog entries-->
-                <div class="col-lg-8">
-                    <!-- Featured blog post-->
-                    <div class="card mb-4">
-                        <a href="{% url 'docu1' %}"><img class="card-img-top" src="{% static 'assets/images/docu1.jpg' %}" alt="..." /></a>
-                        <div class="card-body">
-                            <div class="small text-muted">Sept 11, 2022</div>
-                            <h2 class="card-title">Un documental sobre la epidemia de opioides gana el León de Oro</h2>
-                            <p class="card-text">El documental 'All the Beauty and the Bloodshed', de Laura Poitras, que aborda la crisis de opioides en Estados Unidos, ganó ayer el León de Oro de la 79 edición del Festival de Venecia.</p>
-                            <a class="btn btn-primary" href="{% url 'docu1' %}">Leer más →</a>
-                        </div>
-                    </div>
-                    <!-- Nested row for non-featured blog posts-->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="{% url 'docu2' %}"><img class="card-img-top" src="{% static 'assets/images/docu2.jpg' %}" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">'El crimen del siglo', el documental de HBO sobre las farmacéuticas que deberías ver</h2>
-                                    <p class="card-text">Una operación macabra y masiva llevada a cabo por la industria farmacéutica y funcionarios sin escrúpulos que se enriquecieron a costa de cientos de miles de vidas.</p>
-                                    <a class="btn btn-primary" href="{% url 'docu2' %}">Leer más →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="{% url 'docu3' %}"><img class="card-img-top" src="{% static 'assets/images/docu3.jpg' %}" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">Mayo 11, 2022</div>
-                                    <h2 class="card-title h4">El Farmacéutico: un documental que va más allá de la muerte de un hijo</h2>
-                                    <p class="card-text">El Farmeceútico es un documental un padre que, en la búsqueda del asesino de su hijo, se encuentra con el drama de los adictos a los opioides en un barrio pobre de Nueva Orleans.</p>
-                                    <a class="btn btn-primary" href="{% url 'docu3' %}">Leer más →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="{% url 'docu4' %}"><img class="card-img-top" src="{% static 'assets/images/docu4.jpg' %}" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">Diciembre 29, 2022</div>
-                                    <h2 class="card-title h4">La mejor serie de 2021 es 'Dopesick': capitalismo, opiáceos y la ruina de una generación</h2>
-                                    <p class="card-text">Una producción excepcional de Disney+ con Michael Keaton y Rosario Dawson sobre la epidemia de adicción que amenaza el futuro de EEUU</p>
-                                    <a class="btn btn-primary" href={% url 'docu4' %}>Leer más →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="{% url 'docu5' %}"><img class="card-img-top" src="{% static 'assets/images/docu5.jpg' %}" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">Patrick Radden, Septmiebre 2021</div>
-                                    <h2 class="card-title h4">Libro 'El imperio del dolor'</h2>
-                                    <p class="card-text">Desde 2017, Patrick Radden Keefe ha investigado los secretos de la dinastia Sackler. El resultado es una bomba periodistica que relata el auge y declive de una de las grandes familias norteamericanas y su oscuro emporio</p>
-                                    <a class="btn btn-primary" href="{% url 'docu5' %}">Leer más →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                        <!-- Side widgets-->
-                        <div class="col-lg-4">
-                            
-                            <!-- Categories widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">Lista de Artículos</div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <ul class="list-unstyled mb-0">
-                                                <li><a href="{% url 'docu1' %}">Un documental sobre la epidemia de opioides gana el León de Oro</a></li>
-                                                <br>
-                                                <li><a href="{% url 'docu4' %}">'Dopesick': capitalismo, opiáceos y la ruina de una generación</a></li>
-                                                <br>
-                                                <li><a href="{% url 'docu5' %}">libro El imperio de dolor</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <ul class="list-unstyled mb-0">
-                                                <li><a href="{% url 'docu2' %}">'El crimen del siglo', el documental de HBO sobre las farmacéuticas que deberías verL</a></li>
-                                                <br>
-                                                <li><a href="{% url 'docu3' %}">El Farmacéutico: un documental que va más allá de la muerte de un hijo</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-            </div>
-        </div>
 
 
 {% endblock content %}

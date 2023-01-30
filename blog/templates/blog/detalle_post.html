@@ -1,0 +1,27 @@
+
+
+{% extends 'blog/base.html' %}
+
+{% block title %} Detalle Posts {% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <img src="{{object.imagen.url}}" alt="">
+    <br><br>
+    <h2>{{ object.titulo }}</h2>
+
+    <p> Autor: {{ object.autor }}</p>
+    <p> Fecha: {{ object.fecha_blog }}</p>
+
+    {{ object.campo_blog | safe }}
+
+    <a href="{% url 'lista_posts' %}">Volver a la lista</a>
+</div>
+
+<br>
+
+
+
+{% endblock content %}
+        

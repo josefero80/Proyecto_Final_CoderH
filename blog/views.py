@@ -1,23 +1,42 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from blog.models import Post, Comentario
+from django.urls import reverse, reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+from blog.forms import PostUpdateForm
 
 
 # Create your views here.
 
-def home(request):
-    return render(request, 'blog/index.html',)
+def homepage(request):
+    return render(request, 'blog/index.html', )
 
-def docu1(request):
-    return render(request, 'blog/docu1.html',)
+class PostList(ListView):
+    model = Post
+    template_name = 'blog/listaposts.html'
 
-def docu2(request):
-    return render(request, 'blog/docu2.html')
+class Lista_edicion(ListView):
+    model = Post
+    template_name = 'blog/listaEdicion.html'
 
-def docu3(request):
-    return render(request, 'blog/docu3.html',)
+class PostDetail(DetailView):
+    model = Post
+    success_url = reverse_lazy('homepage')
+    template_name = 'blog/detalle_post.html'
 
-def docu4(request):
-    return render(request, 'blog/docu4.html',)
+class EditPost(UpdateView):
+    model = Post
+    template_name = 'blog/editarPost.html'     
+    form_class = PostUpdateForm
+    success_url = reverse_lazy('lista_edicion')
 
-def docu5(request):
-    return render(request, 'blog/docu5.html',)
+class CreaPost(CreateView):
+    model = Post
+    template_name = 'blog/creaPost.html'
+    form_class = PostUpdateForm
+    success_url = reverse_lazy('lista_edicion')
+
+class EliminaPost(DeleteView):
+    model = Post
+    template_name = 'blog/eliminaPost.html'
+    success_url = reverse_lazy('lista_edicion')

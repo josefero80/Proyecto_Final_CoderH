@@ -1,11 +1,12 @@
 from django.urls import path
-from . import views
+from blog.views import PostDetail, PostList, Lista_edicion, EditPost, CreaPost, EliminaPost
 
 urlpatterns = [
+    path('pages/', PostList.as_view(), name="lista_posts"),
+    path('lista-editar/', Lista_edicion.as_view(), name="lista_edicion"),
+    path('pages/<int:pk>/', PostDetail.as_view(), name="detalle_post"),
+    path('pages/editar/<int:pk>/', EditPost.as_view(), name="editar_post"),
+    path('pages/crear-post/', CreaPost.as_view(), name="crear_post"),
+    path('pages/elimina-post/<int:pk>/', EliminaPost.as_view(), name="elimina_post"),
 
-    path('docu1/', views.docu1, name="docu1"),
-    path('docu2/', views.docu2, name="docu2"),
-    path('docu3/', views.docu3, name="docu3"),
-    path('docu4/', views.docu4, name="docu4"),
-    path('docu5/', views.docu5, name="docu5"),
 ]

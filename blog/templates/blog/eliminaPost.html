@@ -1,0 +1,22 @@
+
+{% extends 'blog/base.html' %}
+
+{% block title %} Elimina Post {% endblock title %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        <h2><strong>¿DESEA ELIMINAR EL REGISTRO {{ object }} ??</h2>
+    </div>
+</div>
+<br><br>
+
+<form method="post">
+  {% csrf_token %}
+
+  <button type="submit" class="btn btn-danger">Confirmar</button>
+</form>
+<br><br>
+
+{% endblock content %}

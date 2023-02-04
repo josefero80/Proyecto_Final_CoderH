@@ -30,7 +30,7 @@ Python 3.10.4
 Django 4.0
 
 Pruebas Realizadas
-Ver archivo titulado "Pruebas_Proyecto.xlsx" el cual se encuentra en el presente repositorio.
+Ver archivo titulado "Pruebas_Proyecto.xlsx" presente en el actual repositorio.
 
 Video Demostración:
 https://www.awesomescreenshot.com/video/14544751?key=cc974363b07b0df731e0944c7d3a07be

@@ -5,6 +5,12 @@ from django.contrib.auth.views import LogoutView
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from accounts.forms import UserRegisterForm
+from django.views.generic import ListView, CreateView, UpdateView, DetailView
+from django.contrib.auth.models import User
+from accounts.forms import UserUpdateForm, UserDetail
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
@@ -46,3 +52,23 @@ def Registrar_usuario(request):
         form = UserRegisterForm()
     
     return render(request, 'accounts/registrarUsuario.html', {'form': form}, )
+    
+class UserDetailView(LoginRequiredMixin, DetailView):
+    login_url = 'login_user'
+    model = User
+    form_class = UserDetail
+    success_url = reverse_lazy('lista_edicion')
+    template_name = "accounts/profile.html"
+
+class ProfileUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = 'login_user'
+    model = User
+    form_class = UserUpdateForm
+    success_url = reverse_lazy('homepage')
+    template_name = 'accounts/editar_perfil.html'
+
+    def get_object(self, queryset=None):
+        return self.request.user
+    
+
+

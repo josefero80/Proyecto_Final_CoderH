@@ -7,7 +7,11 @@
 {% if user.is_authenticated %}
 
   <h3>Bienvenido,  {{ user.first_name }}</h3>
-  <br><br>
+  <button type="button" class="btn btn-light"><a class="nav-link" href="{% url 'profile_user' user.id %}">Informacion Usuario</a></button>
+  <button type="button" class="btn btn-light"><a class="nav-link" href="{% url 'edit_user' %}">Editar Usuario</a></button>
+  
+<br>
+
 
 {% endif %}
 

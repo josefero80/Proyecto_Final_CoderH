@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Profile {% endblock title %}
+
+{% block content %}
+
+<p>Tu username es <b>{{ object.username }}</b></p>
+
+<h1>Detalles del usuario</h1>
+<br>
+<p>Nombre: {{ user.first_name }}, Apellido: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+
+<br>
+<button type="button" class="btn btn-light"><a class="nav-link" href="{% url 'lista_edicion' %}">Volver</a></button>
+{% endblock content %}
+        

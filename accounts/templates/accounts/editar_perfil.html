@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Formulario perfil {% endblock title %}
+
+{% block content %}
+<p>Tu username es <b>{{ object.username }}</b></p>
+
+<h3>Editar datos:</h3>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Salvar"/>
+</form>
+<br>
+<button type="button" class="btn btn-light"><a class="nav-link" href="{% url 'lista_edicion' %}">Volver</a></button>
+{% endblock content %}
+        

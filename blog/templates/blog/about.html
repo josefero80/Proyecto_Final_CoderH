@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block subtitulo %}Acerca de mi{% endblock subtitulo %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center my-5">
+        <h2 class="fw-bolder">Jose Ojeda</h2>
+
+    </div>
+
+<img src="{% static 'assets/self.jpg' %}" width="500" height="380" style="float: right; margin: 0 0 1em 2em"/>
+
+<p>
+    Un poco acerca de mi..... soy egresado de ingenieria electrónica hace unos 18 años atrás, aunque no tengo enfoque en desarrollo de software, siempre me ha gustado el mundo de la computación.<br>
+    En los últimos años he estado tomando cursos para profundizar en los conceptos de programación y 'curiosiado' en cosas varias.... <br>
+
+    Con mi esposa manejamos nuestra empresa familiar, y finalmente me he dado cuenta que el enfoque actual para ser más eficientes
+    en la gestión de recursos de la misma es a travez de los datos, es por ello que quiero enfocarme en el data analysis. <br>
+    
+    Una de las categorias que me gusta ver cuando veo netflix o cualquier video on demand, son los documentales, y uno de los ultimos que me llamó
+    la atención son los documentales acerca de la "Crisis de los Opioides" y como se ha convertido en uno de los problemas sociales 
+    más sonados ultimamente. Este proyecto de CoderHouse se basa en un blog, donde se puede compartir información de investigaciones, libros, series y documentales
+    que hablan sobre el tema.
+
+</p>
+</div>
+
+
+{% endblock content %}

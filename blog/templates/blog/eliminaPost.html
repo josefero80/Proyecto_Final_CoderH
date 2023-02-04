@@ -7,9 +7,9 @@
 
 <div class="card">
     <div class="card-header">
-        <h2><strong>¿DESEA ELIMINAR EL REGISTRO {{ object }} ??</h2>
+        <h2><strong>¿DESEA ELIMINAR EL REGISTRO: {{ object }} ??</h2>
     </div>
-</div>cd 
+</div>
 <br><br>
 
 <form method="post">
@@ -18,5 +18,6 @@
   <button type="submit" class="btn btn-danger">Confirmar</button>
 </form>
 <br><br>
+<button type="button" class="btn btn-light"><a class="nav-link" href="{% url 'lista_edicion' %}">Volver</a></button>
 
 {% endblock content %}

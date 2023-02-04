@@ -17,7 +17,7 @@
               <div class="card-body">
                   <div class="small text-muted">{{blog.fecha_blog}}</div>
                   <h2 class="card-title">{{blog.titulo}}</h2>
-                  <p class="card-text">{{blog.descripcion_corta}}</p>
+                  <p class="card-text">{{blog.descripcion_corta|slice:"300"}}</p>
                   <a class="btn btn-primary" href="{% url 'detalle_post' blog.id %}">Leer más →</a>
               </div>
           </div>

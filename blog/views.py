@@ -15,9 +15,12 @@ class PostList(ListView):
     model = Post
     template_name = 'blog/listaposts.html'
 
+# def Lista_edicion(request):
+#     pass
 class Lista_edicion(ListView):
     model = Post
     template_name = 'blog/listaEdicion.html'
+
 
 class PostDetail(DetailView):
     model = Post

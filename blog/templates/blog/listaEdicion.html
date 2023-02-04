@@ -4,12 +4,18 @@
 {% block title %} Lista edicion {% endblock title %}
 
 {% block content %}
+{% if user.is_authenticated %}
+
+  <h3>Bienvenido,  {{ user.first_name }}</h3>
+  <br><br>
+
+{% endif %}
 
 <table class="table">
     <tbody>
       <tr>
         <th>Titulo</th>
-        <th>Categoria</th>
+        <th>Autor</th>
         <td>Fecha</td>
         <td>Ver</td>
         <td>Editar</td>
@@ -18,7 +24,7 @@
       {% for blog in object_list %}
       <tr>
         <td>{{ blog.titulo }}</td>
-        <td>{{ blog.categoria }}</td>
+        <td>{{ blog.autor }}</td>
         <td>{{ blog.fecha_blog }}</td>
         <td>
           <a href="{% url 'detalle_post' blog.id %}">Ver más...</a>
